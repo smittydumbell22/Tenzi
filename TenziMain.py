@@ -36,7 +36,7 @@ class Dice:
         self.die = ''
         self.selected = selected[key]
 
-    def draw(self):  # draw the die
+    def draw(self):  # draw the die faces 1 through 6
         self.die = pygame.draw.rect(screen, (255, 255, 255), [
                                     self.x_pos, self.y_pos, 100, 100], 0, 5)
         if self.number == 1:
@@ -100,7 +100,7 @@ class Dice:
                 self.selected = False
                 selected[self.key] = False
             else:
-                selected[self.key] = True
+                selected[self.key] = True # check to see if the ones are all selected for round one and so forth
                 self.selected = True
                 check_round_complete()
 
